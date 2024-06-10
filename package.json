@@ -25,6 +25,7 @@
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "dotenv": "^16.4.5",
+    "env-cmd": "^10.1.0",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.381.0",
     "mongoose": "^8.3.1",
