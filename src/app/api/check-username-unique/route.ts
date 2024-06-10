@@ -43,7 +43,7 @@ export async function GET(request:Request) {
         return Response.json({
             success : true,
             message : "username is available."
-        },{status : 400})
+        },{status : 200})
         
     } catch (err) {
         console.error("Username checking gone wrong...")
