@@ -11,16 +11,14 @@ import { useRouter } from "next/navigation"
 import { signUpSchema } from "@/schemas/signUpSchema"
 import axios, { AxiosError } from "axios"
 import { apiResponse } from "@/types/apiResponse"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Loader2 } from "lucide-react"
 
-const page = () => {
+const Page = () => {
 
   const [username,setUsername] = useState('')
   const [usernameMessage,setUsernameMessage] = useState('')
-  const [ isCheckingUsername,setIsCheckingUsername] = useState(false)
   const [ isSubmitting,setIsSubmitting] = useState(false)
 
   const debounce = useDebounceCallback(setUsername,500)
@@ -39,7 +37,6 @@ const page = () => {
   useEffect(() =>{
     const checkUsernameUnique = async () =>{
       if(username){
-        setIsCheckingUsername(true)
         setUsernameMessage('')
         try {
           const response = await axios.get(`/api/check-username-unique?username=${username}`)
@@ -47,8 +44,6 @@ const page = () => {
         } catch (error) {
           const axiosError = error as AxiosError<apiResponse>
           setUsernameMessage(axiosError.response?.data.message ?? "error while checking username")
-        }finally{
-          setIsCheckingUsername(false)
         }
       }
         
@@ -164,4 +159,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

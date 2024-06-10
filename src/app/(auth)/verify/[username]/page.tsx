@@ -12,14 +12,12 @@ import { apiResponse } from '@/types/apiResponse'
 import {
     InputOTP,
     InputOTPGroup,
-    InputOTPSeparator,
     InputOTPSlot,
   } from "@/components/ui/input-otp"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Button } from '@/components/ui/button'
-import { useTimeout } from 'usehooks-ts'
 
-const page = () => {
+const Page = () => {
 
     const router = useRouter();
     const params = useParams<{username : string}>()
@@ -96,4 +94,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

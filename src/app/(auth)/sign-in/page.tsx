@@ -1,20 +1,20 @@
-'use client'
+'use client';
 
 import { useForm} from "react-hook-form"
 import  {z} from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import Link from "next/link"
 import { useState } from "react"
-import { useToast } from "@/components/ui/use-toast"
+
 import { useRouter } from "next/navigation"
-import { signUpSchema } from "@/schemas/signUpSchema"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { signIn } from "next-auth/react"
 import { signInSchema } from "@/schemas/signInSchema"
+import { useToast } from "@/components/ui/use-toast"
 
-const page = () => {
+const Page = () => {
 
   
   const [ isSubmitting,setIsSubmitting] = useState(false)
@@ -31,6 +31,7 @@ const page = () => {
 
  
   const onSubmit = async (data: z.infer<typeof signInSchema>) => {
+    setIsSubmitting(true)
     const result = await signIn('credentials', {
       redirect: false,
       identifier: data.identifier,
@@ -53,6 +54,7 @@ const page = () => {
         });
       }
     }
+    setIsSubmitting(false)
 
     if (result?.url) {
       router.replace('/dashboard');
@@ -122,4 +124,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
