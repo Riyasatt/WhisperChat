@@ -79,7 +79,7 @@ const config = {
         "caret-blink": "caret-blink 1.25s ease-out infinite",
       },
       backgroundImage :{
-        "bg" : "url('/bg.jpg')"
+        "bg" : "linear-gradient(rgba(15,23,42,1),rgba(0,0,0,0.8)), url(/bg.jpg)"
       }
     },
   },

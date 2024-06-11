@@ -25,6 +25,8 @@
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "dotenv": "^16.4.5",
+    "embla-carousel-autoplay": "^8.1.4",
+    "embla-carousel-react": "^8.1.4",
     "env-cmd": "^10.1.0",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.381.0",

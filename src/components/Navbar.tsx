@@ -12,13 +12,13 @@ const Navbar = () => {
     const user : User= session?.user as User
 
   return (
-    <nav className='p-4 md:p-6 shadow-md bg-slate-900 text-white sticky top-0 z-50'>
-        <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
-            <a className='text-xl font-bold mb-4 md:mb-0' href="/">Whisper Chat</a>
+    <nav className='py-4 md:py-6  bg-slate-900 text-white top-0 z-50 overflow-hidden '>
+        <div className='container  flex justify-between items-center'>
+            <a className='text-xl font-bold mb-4 md:mb-0' href="/">Asli Feedback </a>
             {
                 session ? (
                     <>
-                        <span className='mr-4'>
+                        <span className=' hidden md:visible'>
                             Welcome {user?.username || user?.email} 
                         </span>
                         <Button className='text-white' variant='destructive' onClick={()=>signOut()}>

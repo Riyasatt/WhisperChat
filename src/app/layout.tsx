@@ -8,7 +8,7 @@ import Navbar from '@/components/Navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Masked Opinion',
+  title: 'Asli Feedback',
   description: 'Real feedback from real people.',
 };
 
@@ -20,7 +20,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" >
       <AuthProvider>
-        <body className={`${inter.className} dark` }>
+        <body className={`${inter.className} dark `  }>
           {/* <Navbar /> */}
           {children}
           <Toaster />

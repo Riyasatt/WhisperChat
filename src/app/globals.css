@@ -73,8 +73,26 @@
     body {
       @apply bg-background text-foreground;
     }
-    .bg-btn{
+    /* .bg-btn{
       @apply bg-gradient-to-br from-blue-600 to-purple-500 text-white
+    } */
+    /* .bg-btn{
+      @apply bg-blue-500
+    } */
+
+    .bg-btn{
+      @apply bg-gradient-to-r from-blue-400 to-blue-600
     }
 
   }
+
+  
+::-webkit-scrollbar{
+  visibility: hidden;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #3b82f6;
+  border-radius: 5px;
+}
