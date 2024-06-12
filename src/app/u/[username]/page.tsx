@@ -22,6 +22,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import Footer from '@/components/Footer';
 
 const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -112,6 +113,7 @@ const Page = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
