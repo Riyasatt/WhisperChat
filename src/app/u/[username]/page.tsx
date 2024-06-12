@@ -63,6 +63,7 @@ const Page = () => {
   };
 
   return (
+    <div>
     <div className="py-28 flex flex-col justify-between container min-h-screen ">
       <div className=" font-extrabold text-5xl text-center">
         Public Profile Link
@@ -81,7 +82,7 @@ const Page = () => {
                   <FormControl>
                     <Textarea
                       placeholder="Write your anonymous message here"
-                      className="resize-none h-32 w-[80%] text-lg"
+                      className="resize-none h-32 w-full md:w-[80%] text-lg"
                       {...field}
                     />
                   </FormControl>
@@ -113,6 +114,7 @@ const Page = () => {
           </Link>
         </div>
       </div>
+    </div>
       <Footer />
     </div>
   );
